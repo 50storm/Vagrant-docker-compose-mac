@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    # ホストOS(centos7)とゲスト(nginxコンテナ)のディレクトリ同期
+    volumes:
+      - /mac_home/index.html:/usr/share/nginx/html/index.html
